@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1534" height="442" viewBox="0 0 1534 442">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1322" data-name="Rectangle 1322" width="1461" height="437" transform="translate(14386 -9318)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <filter id="Path_19057" x="-180" y="9.644" width="2224.179" height="1881.735" filterUnits="userSpaceOnUse">
+      <feOffset dy="64" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="38" result="blur"/>
+      <feFlood flood-opacity="0.141"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-Artboard_3">
+      <rect width="1534" height="442"/>
+    </clipPath>
+  </defs>
+  <g id="Artboard_3" data-name="Artboard – 3" clip-path="url(#clip-Artboard_3)">
+    <g id="Mask_Group_101" data-name="Mask Group 101" transform="translate(-14313 9323)" clip-path="url(#clip-path)">
+      <g transform="matrix(1, 0, 0, 1, 14313, -9323)" filter="url(#Path_19057)">
+        <path id="Path_19057-2" data-name="Path 19057" d="M0,0C360-650.25,1440-221.943,1440-221.943s891.4,905.377,0,1320.9S0,1134.687,0,1134.687-360,650.25,0,0Z" transform="translate(94 420)" fill="#f8f8f8"/>
+      </g>
+    </g>
+  </g>
+</svg>
