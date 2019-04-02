@@ -11,7 +11,8 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 body {
   font-family: 'Lato', sans-serif;
   line-height: 1;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block; }
@@ -91,6 +92,13 @@ h1 {
     bottom: 10px;
     right: -25px; }
 
+svg {
+  width: 100%;
+  position: absolute;
+  bottom: -580px;
+  right: -60px;
+  z-index: 2; }
+
 .padZero {
   padding: 0; }
 
@@ -157,6 +165,7 @@ ul.nav-list {
     width: 95%;
     height: 270px;
     padding: 20px;
+    z-index: 2;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -466,12 +475,22 @@ ul.nav-list {
   border: 70px solid #008ECE;
   z-index: 9; }
 
-.bottom-strip {
-  background: url(/app/assets/images/bottom-strip.png);
+.bottom-strip--white {
+  background: url(/app/assets/images/bottom-strip-white.png);
   height: 328px;
   background-size: cover;
   position: absolute;
-  bottom: -250px;
+  bottom: -210px;
+  left: -2px;
+  right: 0;
+  z-index: 2; }
+
+.bottom-strip--blue {
+  background: url(/app/assets/images/bottom-strip-blue.png);
+  height: 220px;
+  background-size: cover;
+  position: absolute;
+  bottom: -100px;
   left: -2px;
   right: 0;
   z-index: 1; }
