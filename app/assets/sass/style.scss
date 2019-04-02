@@ -542,7 +542,7 @@ ul.nav-list {
 
 .rq-footer {
   background: #F6F6F6;
-  padding: 50px 0;
+  padding: 50px 0 0 0;
   p {
     margin: 20px 0;
     font-size: 12px;
@@ -565,6 +565,33 @@ ul.nav-list {
     li {
       list-style: none;
 
+    }
+  }
+}
+
+.footer-strip {
+  background: #EFEFEF;
+  color: rgba(0,0,0,0.4);
+  padding: 20px;
+  font-size: 14px;
+  ul {
+    margin: 0;
+    display: $inline-block;
+    vertical-align: middle;
+    li {
+      padding: 0 15px;
+      font-size: 14px;
+      display: $inline-block;
+      position: $relative;
+      &:after {
+        content: "";
+        position: $absolute;
+        top: 2px;
+        bottom: 2px;
+        right: 0;
+        background: rgba(0,0,0,0.4);
+        width: 1px;
+      }
     }
   }
 }
@@ -660,6 +687,26 @@ ul.nav-list {
   z-index: 1;
 }
 
+.testimonial-header {
+  .info {
+    margin-left: 15px;
+  }
+  .title {
+    font-size: 22px;
+    font-weight: 900;
+  }
+  .designation {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+}
+
+.testimonial-content {
+  font-size: 16px;
+  margin-top: 20px;
+  line-height: 22px;
+}
+
 .testimonial-bg {
   background: url(/app/assets/images/testimonial-bg.svg);
   height: 1092px;
@@ -668,4 +715,40 @@ ul.nav-list {
   right: 0;
   left: 0;
   z-index: 1;
+}
+
+.testimonial-wrapper {
+  margin-top: 100px;
+}
+
+.bx-wrapper {
+  background: transparent !important;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.bx-viewport {
+  height: inherit !important;
+}
+
+.bx-controls-direction {
+  position: absolute !important;
+  bottom: -40px !important;
+  left: 40px !important;
+}
+
+.bx-wrapper .bx-next {
+  left: 10px !important;
+  right: initial !important;
+}
+
+.bx-wrapper .bx-prev {
+  right: 10px !important;
+  left: initial !important;
+}
+
+.bx-wrapper .bx-pager {
+  display: none !important;
 }
