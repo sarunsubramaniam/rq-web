@@ -610,3 +610,32 @@ ul.nav-list {
 
 .bx-wrapper .bx-pager {
   display: none !important; }
+
+@media only screen and (max-width: 768px) {
+  .rq-services p {
+    width: 100%; }
+  .rq-services .card {
+    margin-bottom: 25px; }
+    .rq-services .card span {
+      display: inline-block;
+      vertical-align: middle; }
+      .rq-services .card span img {
+        margin: 0 auto; }
+      .rq-services .card span:first-child {
+        position: relative;
+        top: initial;
+        width: 20%;
+        -webkit-transform: initial;
+        -moz-transform: initial;
+        -ms-transform: initial;
+        -o-transform: initial;
+        transform: initial; }
+      .rq-services .card span:last-child {
+        position: relative;
+        bottom: initial;
+        left: initial;
+        margin-left: 15px; }
+    .rq-services .card.one, .rq-services .card.two, .rq-services .card.three, .rq-services .card.four {
+      position: relative;
+      top: initial;
+      height: initial; } }
