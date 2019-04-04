@@ -111,6 +111,7 @@ h1 {
   font-family: "Product Sans";
   font-size: 42px;
   font-weight: 700;
+  padding: 0 30px;
   position: $relative;
   display: $inline-block;
   &:after {
@@ -123,7 +124,7 @@ h1 {
     -moz-border-radius: 50%;
     border-radius: 50%;
     bottom: 10px;
-    right: -25px;
+    right: 5px;
   }
 }
 
@@ -195,13 +196,14 @@ ul.nav-list {
 .rq-services {
   position: $relative;
   background: $white;
-  height: 180vh;
-  padding: 250px 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
   p {
     font-size: 20px;
-    margin: 30px 0;
+    margin: 30px;
     line-height: 28px;
-    width: 33%;
+    width: 33.33%;
     font-weight: 100;
   }
   .card {
@@ -258,7 +260,13 @@ ul.nav-list {
 
 .rq-expertise {
   position: $relative;
-  background: #F8F8F8;
+  .expertise-offset {
+    height: 437px;
+  }
+  .expertise-content {
+    background: #F8F8F8;
+    padding-bottom: 25px;
+  }
   h4 {
     font-family: "Product Sans";
     font-size: 28px;
@@ -270,19 +278,22 @@ ul.nav-list {
   }
   .card {
     float: left;
-    margin: 40px 30px 0 0;
     position: $relative;
     overflow: hidden;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
+    width: 50%;
+    margin-top: 60px;
+    img {
+      border-radius: 32px;
+      margin: 0 auto;
+    }
     .overlay {
       position: $absolute;
       padding: 20px;
       color: $white;
       bottom: 0;
-      right: 0;
+      right: 6%;
       left: 25%;
+      border-bottom-right-radius: 32px;
       background: rgba(0,0,0,0.95);
       top: 50%;
     }
@@ -311,10 +322,11 @@ ul.nav-list {
   padding: 250px 0;
   .card {
     background: #333230;
-    float: left;
     position: $relative;
     width: 85%;
     margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
     height: 380px;
     padding: 50px;
     overflow: hidden;
@@ -500,6 +512,13 @@ ul.nav-list {
   position: $relative;
   background: #2E48BF;
   padding: 100px 0;
+  .circle {
+    position: $absolute;
+    right: 0;
+    bottom: 0;
+    border-radius: 70px;
+    background: $white;
+  }
   h3 {
     font-family: "Product Sans";
     font-size: 30px;
@@ -671,9 +690,9 @@ ul.nav-list {
   height: 437px;
   background-size: cover;
   position: $absolute;
+  top: 0;
   left: -90px;
   right: 0;
-  bottom: 0;
 }
 
 .grey-bottom {
@@ -753,7 +772,7 @@ ul.nav-list {
   display: none !important;
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
   ///* For mobile phones: */
   //[class*="col-"] {
   //  width: 100%;
@@ -764,6 +783,7 @@ ul.nav-list {
       width: 100%;
     }
     .card {
+      padding: 40px 20px;
       margin-bottom: 25px;
       span {
         display: inline-block;

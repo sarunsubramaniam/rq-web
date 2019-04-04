@@ -78,6 +78,7 @@ h1 {
   font-family: "Product Sans";
   font-size: 42px;
   font-weight: 700;
+  padding: 0 30px;
   position: relative;
   display: inline-block; }
   h1:after {
@@ -90,7 +91,7 @@ h1 {
     -moz-border-radius: 50%;
     border-radius: 50%;
     bottom: 10px;
-    right: -25px; }
+    right: 5px; }
 
 svg {
   width: 100%;
@@ -151,13 +152,14 @@ ul.nav-list {
 .rq-services {
   position: relative;
   background: #FFFFFF;
-  height: 180vh;
-  padding: 250px 0; }
+  height: 100vh;
+  display: flex;
+  align-items: center; }
   .rq-services p {
     font-size: 20px;
-    margin: 30px 0;
+    margin: 30px;
     line-height: 28px;
-    width: 33%;
+    width: 33.33%;
     font-weight: 100; }
   .rq-services .card {
     background: #FFFFFF;
@@ -201,8 +203,12 @@ ul.nav-list {
     height: 275px; }
 
 .rq-expertise {
-  position: relative;
-  background: #F8F8F8; }
+  position: relative; }
+  .rq-expertise .expertise-offset {
+    height: 437px; }
+  .rq-expertise .expertise-content {
+    background: #F8F8F8;
+    padding-bottom: 25px; }
   .rq-expertise h4 {
     font-family: "Product Sans";
     font-size: 28px; }
@@ -212,19 +218,21 @@ ul.nav-list {
     line-height: 20px; }
   .rq-expertise .card {
     float: left;
-    margin: 40px 30px 0 0;
     position: relative;
     overflow: hidden;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    border-radius: 15px; }
+    width: 50%;
+    margin-top: 60px; }
+    .rq-expertise .card img {
+      border-radius: 32px;
+      margin: 0 auto; }
     .rq-expertise .card .overlay {
       position: absolute;
       padding: 20px;
       color: #FFFFFF;
       bottom: 0;
-      right: 0;
+      right: 6%;
       left: 25%;
+      border-bottom-right-radius: 32px;
       background: rgba(0, 0, 0, 0.95);
       top: 50%; }
 
@@ -246,10 +254,11 @@ ul.nav-list {
   padding: 250px 0; }
   .rq-case-studies .card {
     background: #333230;
-    float: left;
     position: relative;
     width: 85%;
     margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
     height: 380px;
     padding: 50px;
     overflow: hidden;
@@ -396,6 +405,12 @@ ul.nav-list {
   position: relative;
   background: #2E48BF;
   padding: 100px 0; }
+  .rq-contact .circle {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-radius: 70px;
+    background: #FFFFFF; }
   .rq-contact h3 {
     font-family: "Product Sans";
     font-size: 30px; }
@@ -543,9 +558,9 @@ ul.nav-list {
   height: 437px;
   background-size: cover;
   position: absolute;
+  top: 0;
   left: -90px;
-  right: 0;
-  bottom: 0; }
+  right: 0; }
 
 .grey-bottom {
   background: url(/app/assets/images/grey-bottom.svg);
@@ -611,10 +626,11 @@ ul.nav-list {
 .bx-wrapper .bx-pager {
   display: none !important; }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .rq-services p {
     width: 100%; }
   .rq-services .card {
+    padding: 40px 20px;
     margin-bottom: 25px; }
     .rq-services .card span {
       display: inline-block;
