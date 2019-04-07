@@ -144,11 +144,16 @@ ul.nav-list {
   float: right;
   padding: 20px 0;
   li {
+    cursor: pointer;
     list-style: none;
     float: left;
     padding: 15px 25px;
     position: $relative;
     font-size: 13px;
+    a {
+      text-decoration: none;
+      color: $white;
+    }
     &.active:after {
       content: "";
       position: $absolute;
@@ -165,26 +170,70 @@ ul.nav-list {
     }
     &.rq-cta {
       border: 1px solid $white;
+      &.active:after {
+        background: transparent;
+      }
     }
   }
 }
 
+.sticky {
+  ul.nav-list {
+    li {
+      a {
+        color: #000000;
+      }
+      &.active:after {
+        background: #000000;
+      }
+      &.rq-cta {
+        border: 1px solid #000000;
+        &.active:after {
+          background: transparent;
+        }
+      }
+    }
+  }
+}
+
+//.rq-logo {
+//  font-size: 26px;
+//  padding: 25px 0;
+//  font-family: "Product Sans";
+//  font-weight: bold;
+//}
+
 .rq-logo {
-  font-size: 26px;
-  padding: 25px 0;
-  font-family: "Product Sans";
-  font-weight: bold;
+  padding: 20px 0;
+  img {
+    width: 200px;
+  }
 }
 
 .rq-header {
   background: transparent;
-  position: $absolute;
+  position: $fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 55px;
-  z-index: 1;
+  z-index: 99;
   color: $white;
+  &.sticky {
+    background: transparent;
+    position: $fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    color: $white;
+    background: $white;
+    box-shadow: 0px 2px 5px #49444414;
+    -webkit-transition: 0.5s linear;
+    -moz-transition: 0.5s linear;
+    -ms-transition: 0.5s linear;
+    -o-transition: 0.5s linear;
+    transition: 0.5s linear;
+  }
 }
 
 .rq-landing {
@@ -511,28 +560,36 @@ ul.nav-list {
 .rq-contact {
   position: $relative;
   background: #2E48BF;
-  padding: 100px 0;
-  .circle {
-    position: $absolute;
-    right: 0;
-    bottom: 0;
-    border-radius: 70px;
-    background: $white;
-  }
+  padding: 200px 0 100px 0;
+  overflow: hidden;
   h3 {
     font-family: "Product Sans";
     font-size: 30px;
   }
+  .contact-content {
+    position: $relative;
+    z-index: 1;
+  }
   .card {
     background: $white;
     float: left;
-    width: 95%;
+    width: 100%;
     padding: 65px 0;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     border-radius: 15px;
     border-bottom: 5px solid #3E5BE0;
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 3px 99px rgba(0, 0, 0, 0.15);
+  }
+  .circle {
+    position: $absolute;
+    right: -450px;
+    top: 0;
+    border-radius: 50%;
+    width: 1390px;
+    height: 1390px;
+    border: 120px solid $white;
+    z-index: 1;
   }
 }
 
@@ -602,6 +659,14 @@ ul.nav-list {
       font-size: 14px;
       display: $inline-block;
       position: $relative;
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        &:after {
+          background: transparent;
+        }
+      }
       &:after {
         content: "";
         position: $absolute;
@@ -778,7 +843,22 @@ ul.nav-list {
   //  width: 100%;
   //}
 
+  svg {
+    display: none;
+  }
+
+  .rq-expertise {
+    .card {
+      width: 100%;
+      .overlay {
+        right: 0;
+      }
+    }
+  }
+
   .rq-services {
+    display: inline-block;
+    padding-top: 120px;
     p {
       width: 100%;
     }

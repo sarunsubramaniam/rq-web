@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Digiryte</title>
+  <title>Rootquotient</title>
 </head>
 <!-- Latest compiled and minified CSS -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,23 +14,25 @@
 <header class="container-fluid rq-header">
   <div class="container">
     <div class="col-md-2 padZero">
-      <div class="rq-logo">digiryte</div>
+      <div class="rq-logo">
+          <img class="img-responsive" src="assets/images/rq-logo-primary.svg" alt="">
+      </div>
     </div>
     <div class="col-md-10 padZero">
       <ul class="nav-list">
-        <li class="active">Home</li>
-        <li>Services</li>
-        <li>Expertise</li>
-        <li>Clients</li>
-        <li>Case studies</li>
-        <li>Awards</li>
-        <li>Blog</li>
-        <li class="rq-cta">LETS TALK</li>
+        <li class="active"><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#clients">Clients</a></li>
+        <li><a href="#case-studies">Case studies</a></li>
+        <li><a href="#achievements">Awards</a></li>
+        <li><a href="#">Blog</a></li>
+        <li class="rq-cta"><a href="#contact">LETS TALK</a></li>
       </ul>
     </div>
   </div>
 </header>
-<section class="container-fluid rq-landing">
+<section id="home" class="container-fluid rq-landing">
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1465" height="1245" viewBox="0 0 1465 1245">
     <defs>
       <filter id="Ellipse_1208" x="-128.5" y="-145.5" width="1026" height="1026" filterUnits="userSpaceOnUse">
@@ -8667,7 +8669,7 @@
   <div class="bottom-strip--blue"></div>
   <div class="bottom-strip--white"></div>
 </section>
-<section class="container-fluid rq-services">
+<section id="services" class="container-fluid rq-services">
     <div class="container">
       <h1>What we do</h1>
       <p>The vision of the company is to be the pioneer in digital strategy, consulting & implementation in Industry 4.0, with our core area of focus in the following.</p>
@@ -8712,7 +8714,7 @@
 <section class="container-fluid rq-expertise padZero">
   <div class="grey-top"></div>
   <div class="expertise-offset"></div>
-  <div class="container-fluid expertise-content">
+  <div id="expertise" class="container-fluid expertise-content">
     <div class="container">
       <h1>Our Expertise</h1>
       <div class="col-md-12 padZero">
@@ -8749,7 +8751,7 @@
     </div>
   </div>
 </section>
-<section class="container-fluid rq-clients">
+<section id="clients" class="container-fluid rq-clients">
   <div class="container">
     <div class="col-md-12 padZero text-center">
       <h1>Our Clients</h1>
@@ -8758,7 +8760,7 @@
     <div class="bottom-strip-1"></div>
   </div>
 </section>
-<section class="container-fluid rq-case-studies">
+<section id="case-studies" class="container-fluid rq-case-studies">
   <div class="container">
     <h1>Case studies</h1>
     <div class="col-md-12 padZero">
@@ -8849,7 +8851,7 @@
     <div class="bottom-strip-2"></div>
   </div>
 </section>
-<section class="container-fluid rq-achievements">
+<section id="achievements" class="container-fluid rq-achievements">
   <div class="container">
     <div class="col-md-12 padZero text-center">
       <h1>Our Achievements</h1>
@@ -8925,10 +8927,10 @@
     <span class="testimonial-bg"></span>
   </div>
 </section>
-<section class="container-fluid rq-contact">
+<section id="contact" class="container-fluid rq-contact">
   <div class="container">
     <span class="circle"></span>
-    <div class="col-md-10 col-md-offset-1 padZero">
+    <div class="col-md-10 col-md-offset-1 contact-content padZero">
       <div class="card">
         <div class="col-md-6 col-md-offset-3">
           <h3>Lets Talk!</h3>
@@ -8955,7 +8957,9 @@
   <div class="container">
     <div class="col-md-12 padZero">
       <div class="col-md-4">
-        <span class="rq-logo">digiryte</span>
+        <span class="rq-logo">
+            <img class="img-responsive" src="assets/images/rq-logo-secondary.svg" alt="">
+        </span>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sapien mauris, ullamcorper a malesuada id, cursus vel ligula. Donec ex magna, convallis non diam vel, convallis lacinia lacus. Aliquam sapien mauris, ullamcorper a malesuada id, cursus vel ligula.
         </p>
@@ -9001,7 +9005,7 @@
           <li>Cookies</li>
         </ul>
       </div>
-      <div class="col-xs-12 col-md-5 pull-right">
+      <div class="col-xs-12 col-md-5 pull-right text-right">
         <span class="">2017 All rights reserved</span>
       </div>
     </div>
@@ -9012,4 +9016,17 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="assets/scripts/script.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.bxslider').bxSlider();
+
+        $('a[href*="#"]').on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate(
+                {scrollTop: $($(this).attr('href')).offset().top,}, 1000, 'linear'
+            );
+        });
+
+    });
+</script>
 </html>
