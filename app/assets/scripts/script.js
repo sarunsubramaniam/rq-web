@@ -1,4 +1,4 @@
-var landingHeight = $('.rq-landing').height();
+var landingHeight = $('.rq-landing').height() - 400;
 var yourNavigation = $(".rq-header");
 stickyDiv = "sticky";
 yourHeader = landingHeight;
@@ -8,12 +8,10 @@ $(window).scroll(function () {
         yourNavigation.addClass(stickyDiv);
         yourNavigation.addClass('sticky');
         $('.rq-header .rq-logo').children('img').attr('src', 'assets/images/rq-logo-secondary.svg');
-        // $('.desktop-menu ul li.contact-info').css('display', 'inline-block');
     } else {
         yourNavigation.removeClass(stickyDiv);
         yourNavigation.removeClass('sticky');
         $('.rq-header .rq-logo').children('img').attr('src', 'assets/images/rq-logo-primary.svg');
-        // $('.desktop-menu ul li.contact-info').css('display', 'none');
     }
 });
 
