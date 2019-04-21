@@ -19,3 +19,7 @@ $('.nav-list li').click(function () {
    $('.nav-list li').removeClass('active');
     $(this).addClass('active');
 });
+
+$('.mobile-menu').click(function () {
+   $('.mobile-nav-wrapper .nav-list').slideToggle(500);
+});

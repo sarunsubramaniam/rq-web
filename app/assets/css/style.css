@@ -352,7 +352,7 @@ ul.nav-list {
 .rq-achievements {
   position: relative;
   background: #FFFFFF;
-  padding: 30px 0; }
+  padding: 250px 0 30px 0; }
 
 .rq-awards span {
   display: inline-block;
@@ -609,8 +609,8 @@ ul.nav-list {
   background-size: cover;
   position: absolute;
   left: -90px;
-  right: -40px;
-  bottom: -375px;
+  right: 0;
+  bottom: -384px;
   z-index: 1; }
 
 .testimonial-header .info {
@@ -704,4 +704,75 @@ ul.nav-list {
       .rq-services .card.one, .rq-services .card.two, .rq-services .card.three, .rq-services .card.four {
         position: relative;
         top: initial;
-        height: initial; } }
+        height: initial; }
+  .rq-partners {
+    background: #2D47BF; }
+  .rq-partners-wrapper {
+    height: auto;
+    position: relative;
+    margin-top: 60px; }
+    .rq-partners-wrapper span {
+      width: 192px;
+      height: 192px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      position: relative;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none; }
+      .rq-partners-wrapper span img {
+        top: initial;
+        transform: initial;
+        position: relative;
+        padding: 15px 0;
+        left: initial;
+        right: initial;
+        margin: 0 auto;
+        display: block; }
+      .rq-partners-wrapper span.one {
+        top: initial;
+        left: initial; }
+      .rq-partners-wrapper span.two {
+        top: initial;
+        left: initial; }
+      .rq-partners-wrapper span.three {
+        top: initial;
+        left: initial; }
+      .rq-partners-wrapper span.four {
+        top: initial;
+        left: initial; }
+      .rq-partners-wrapper span.five {
+        top: initial;
+        left: initial; }
+  ul.nav-list {
+    display: none;
+    float: none;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto; }
+    ul.nav-list li {
+      float: none;
+      display: block; }
+  .mobile-menu {
+    position: absolute;
+    top: 30px;
+    right: 15px; }
+    .mobile-menu i {
+      font-size: 32px; }
+  .mobile-nav-wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0 auto;
+    top: 80px; }
+    .mobile-nav-wrapper ul.nav-list li.active:after {
+      background: none; }
+  .sticky .mobile-menu i {
+    color: #000000; }
+  .sticky .mobile-nav-wrapper {
+    background: #FFFFFF; }
+  .resp-center {
+    text-align: center;
+    padding: 10px 0; } }
