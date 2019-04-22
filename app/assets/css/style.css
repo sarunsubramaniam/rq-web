@@ -269,7 +269,7 @@ ul.nav-list {
 .rq-clients {
   position: relative;
   background: #2D47BF;
-  padding: 250px 0; }
+  padding: 250px 0 0 0; }
   .rq-clients p {
     color: #FFFFFF;
     margin: 15px 0; }
@@ -359,6 +359,18 @@ ul.nav-list {
   vertical-align: middle;
   padding: 20px 30px; }
 
+.rq-awards img {
+  width: 150px; }
+
+.rq-client-list span {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 20px 30px;
+  width: 25%; }
+
+.rq-client-list img {
+  width: 150px; }
+
 .rq-partners {
   position: relative;
   background: #FFFFFF;
@@ -404,6 +416,7 @@ ul.nav-list {
     -moz-box-shadow: 0 3px 46px rgba(0, 0, 0, 0.07);
     box-shadow: 0 3px 46px rgba(0, 0, 0, 0.07); }
     .rq-partners-wrapper span img {
+      width: 150px;
       top: 50%;
       transform: translateY(-50%);
       position: absolute;
@@ -423,13 +436,6 @@ ul.nav-list {
       width: 225px;
       height: 225px;
       z-index: 1; }
-    .rq-partners-wrapper span.four {
-      top: 300px;
-      left: 75px;
-      z-index: 2; }
-    .rq-partners-wrapper span.five {
-      top: 230px;
-      left: 285px; }
 
 .rq-contact {
   position: relative;
@@ -707,10 +713,15 @@ ul.nav-list {
         height: initial; }
   .rq-partners {
     background: #2D47BF; }
+    .rq-partners h1 {
+      color: #FFFFFF; }
+      .rq-partners h1:after {
+        background: #FFFFFF; }
   .rq-partners-wrapper {
     height: auto;
     position: relative;
-    margin-top: 60px; }
+    margin-top: 60px;
+    margin-bottom: 60px; }
     .rq-partners-wrapper span {
       width: 192px;
       height: 192px;
@@ -739,12 +750,8 @@ ul.nav-list {
       .rq-partners-wrapper span.three {
         top: initial;
         left: initial; }
-      .rq-partners-wrapper span.four {
-        top: initial;
-        left: initial; }
-      .rq-partners-wrapper span.five {
-        top: initial;
-        left: initial; }
+  .rq-header {
+    background: #0C175F; }
   ul.nav-list {
     display: none;
     float: none;
@@ -766,13 +773,42 @@ ul.nav-list {
     right: 0;
     width: 100%;
     margin: 0 auto;
-    top: 80px; }
+    top: 86px;
+    background: #0b165f;
+    -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); }
     .mobile-nav-wrapper ul.nav-list li.active:after {
       background: none; }
   .sticky .mobile-menu i {
     color: #000000; }
   .sticky .mobile-nav-wrapper {
     background: #FFFFFF; }
+  .rq-client-list span {
+    width: 100%; }
+  .mobile-view h1 {
+    padding: 0; }
+    .mobile-view h1:after {
+      background: none; }
+  .mobile-view div {
+    position: absolute;
+    top: 170px;
+    left: 30px;
+    right: 0;
+    margin: 0 auto;
+    color: #FFFFFF; }
+  .mobile-view span {
+    position: absolute;
+    z-index: 5;
+    bottom: -86px;
+    width: 250px;
+    right: 0;
+    left: 0;
+    margin: 0 auto; }
   .resp-center {
     text-align: center;
     padding: 10px 0; } }
+
+@media (min-width: 1440px) {
+  svg {
+    bottom: -570px; } }
